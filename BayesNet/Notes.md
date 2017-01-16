@@ -46,14 +46,22 @@ access nodes and edges
 * `dag0 <- dag(~a + b*a + c*a*b +  e*a + d*e + g*f) `
 * `vpar(dag0)` returns list of parents of each node
 
+
 ## Other Functions
 * `parents()` returns just parents
 * `children()` returns just children
 * `ancestralSet()` returns selected nodes and its parents
+* `separates("a", "d", c("b", "c"), ug0)`, checks if {b,c} separates {a,d}
+
 
 ## DAG Operations
 * Converting into and **undirected** graph
 * use `moralize()`
 
+# Conditional Independence
+
+* A ⊥ B | C is when A and B are separated by a set C
+* Read as A and B are conditionally independent, given C
+* f(A,B | C) = f(A|C)f(B|C)
 
 
